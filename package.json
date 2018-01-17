@@ -1,9 +1,10 @@
 {
-  "name": "vselect",
+  "name": "vslct",
   "version": "1.0.0",
-  "description": "vselect",
+  "description": "vslct",
   "repository": "https://github.com/franco-q/vselect",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "email": "franco.n.quintana@gmail.com",
   "scripts": {
     "dev": "webpack-dev-server --hot --open",
     "build": "webpack --config webpack.build.js"
