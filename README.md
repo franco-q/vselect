@@ -12,7 +12,7 @@ Import the component
 
 ```html
 <script>
-import {vselect, voption} from '../dist/index'
+import {vselect, voption} from 'vslct'
 
 export default {
   ...
