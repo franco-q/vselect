@@ -39,8 +39,7 @@ export default {
 		selected(a,b){
 			if (!a.disabled) {
 				this.text = a.$el.innerText;
-				this.model = a.value;
-				this.$emit('change', a.vlue);
+				this.$emit('change', a.value);
 				this.$emit('input', a.value);
 				this.active = false;
 			}
