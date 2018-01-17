@@ -12,7 +12,6 @@ module.exports = {
 	},
 	devServer: {
 		compress: true,
-		contentBase: [path.join(__dirname, "public"), path.join(__dirname, "css")],
 		historyApiFallback: true,
 		noInfo: true,
 		overlay: true

@@ -1,11 +1,12 @@
 <template>
   <div>
     <div class="container">
-      <vselect placeholder="ORDENAR POR">
-        <voption value="volvo">Volvo</voption>
-        <voption value="saab" :disabled="true">Saab</voption>
-        <voption value="mercedes">Mercedes</voption>
-        <voption value="audi">Audi</voption>
+      <span>{{foo}}</span>
+      <vselect placeholder="ORDENAR POR" v-model="foo">
+        <voption :value="volvo">Volvo</voption>
+        <voption :value="saab">Saab</voption>
+        <voption :value="mercedes">Mercedes</voption>
+        <voption :value="audi">Audi</voption>
       </vselect>
     </div>
   </div>
@@ -16,6 +17,7 @@ import {vselect, voption} from '../dist/index'
 
 export default {
   name: 'app',
+  props: {foo: 'hellp'},
   components: {vselect, voption},
 }
 </script>
