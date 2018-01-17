@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="container">
-      <vselect placeholder="ORDENAR POR">
+      <span>{{foo}}</span>
+      <vselect placeholder="ORDENAR POR" v-model="foo">
         <voption value="volvo">Volvo</voption>
         <voption value="saab" :disabled="true">Saab</voption>
         <voption value="mercedes">Mercedes</voption>
@@ -17,6 +18,11 @@ import {vselect, voption} from './index'
 export default {
   name: 'app',
   components: {vselect, voption},
+  data(){
+    return{
+      foo: 'hello'
+    }
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 	<div class="_select-wrap" :class="{'_select-active': active}">
 		<div :for="id" class="_select" :class="{'_select-mobile': mobile}" @click="active = !active">
-			<select ref="select" v-model="model" :id="id">
+			<select ref="select" :id="id">
 				<slot></slot>
 			</select>
 			<span class="_select-selected">{{text}}</span>
@@ -29,7 +29,6 @@ export default {
 	data() {
 		return {
 			options: null,
-			model: null,
 			text: this.placeholder,
 			selected: null,
 			active: false,
@@ -42,6 +41,7 @@ export default {
 				this.text = a.$el.innerText;
 				this.model = a.value;
 				this.$emit('change', a.vlue);
+				this.$emit('input', a.value);
 				this.active = false;
 			}
 			else{
