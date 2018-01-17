@@ -5,7 +5,7 @@ Select component in Vue
 ## Install NPM
 
 ```bash
-$ npm install vue-select
+$ npm install vslct
 ```
 
 Import the component
